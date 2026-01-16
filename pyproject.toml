@@ -1,9 +1,23 @@
-[project]
-name = "mlproject1"
+[tool.poetry]
+name = "ml-regression-manim"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "manim>=0.19.1",
+description = "Manim video demo for linear and nonlinear regression"
+authors = [
+    "Piero Pilco Reynoso",
+    "Juan Diego Luque Segura",
 ]
+readme = "README.md"
+packages = [{ include = "regression_demo", from = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+manim = "^0.19.1"
+numpy = "^2.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
